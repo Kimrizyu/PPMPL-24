@@ -22,7 +22,7 @@ class Repository {
   removeItem(id) {
     const index = this.data.findIndex((item) => item.id === id);
     if (index !== -1) {
-      return this.data.splice(index, 1)[0]; 
+      return this.data.pop(index); // Menghapus item di indeks yang ditemukan
     }
     return null;
   }
